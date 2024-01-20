@@ -1,112 +1,251 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simple Search Engine</title>
-  <style>
-    body {background-color:gold;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-     
-    }
-
-    .container {
-      max-width: 800px;
-      margin: 50px auto;
-      text-align: center;
-    }
-
-    .search-container {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 20px;
-    }
-
-    #search-input {
-      width: 70%;
-      padding: 10px;
-      font-size: 16px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-
-    #search-button {
-      padding: 10px 20px;
-      font-size: 16px;
-      background-color: #4caf50;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    #search-results {
-      text-align: left;
-    }
-
-    .result-item {
-      padding: 10px;
-      border-bottom: 1px solid #ccc;
-    }
-  </style>
+<title>BABA K KITCHEN</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+<style>
+body, html {height: 100%}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
+.menu {display: none}
+.bgimg {
+  background-repeat: no-repeat;
+  background-attachment:fixed;
+  background-size: 100%100%;
+  background-image: url("https://media.istockphoto.com/id/1134717299/photo/healthy-food-concept-with-fresh-vegetables-and-ingredients-for-cooking.webp?b=1&s=170667a&w=0&k=20&c=GGqHf625UB2B_GbBGHOrhdaxasaSjcJlyC5FYlvBAn8=");
+  min-height: 90%;
+}
+</style>
 </head>
 <body>
 
-  <div class="container">
-    <h1>BRIGHTEX AI Search Engine</h1>
-
-    <div class="search-container">
-      <input type="text" id="search-input" placeholder="Enter your search">
-      <a href="https://chat.openai.com"><button id="search-button">Search</button></a>
-    </div>
-
-    <div id="search-results">
-      <!-- Search results will be displayed here -->
-    </div>
+<!-- Navbar (sit on top) -->
+<div class="w3-top w3-hide-small">
+  <div class="w3-bar w3-xlarge w3-black w3-opacity w3-hover-opacity-off" id="myNavbar">
+    <a href="#" class="w3-bar-item w3-button">HOME</a>
+    <a href="#menu" class="w3-bar-item w3-button">MENU</a>
+    <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+    <a href="#myMap" class="w3-bar-item w3-button">CONTACT</a>
   </div>
-<hr>
+</div>
+  
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-bottomleft w3-padding">
+    <span class="w3-tag w3-xlarge">Open from 10am to 12pm<br>Ready to embark on a delicious journey? Order your favorite African dishes online with just a few clicks. Explore our menu, select your favorites, and let the feast begin. We bring the flavors of Africa to your doorstep.</span>
+  </div>
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-white w3-hide-small" style="font-size:100px">At [Your Website Name], we take pride in offering you an unparalleled culinary journey through the heart of Africa. Our commitment to quality, authenticity, and a dash of innovation sets us apart as the best destination for your gastronomic delights. From traditional favorites to contemporary twists, we bring you a taste of Africa that transcends boundaries. Join us as we embark on a culinary adventure that celebrates the diversity and richness of our continent's food culture. Your satisfaction is our guarantee, and your taste buds are in for a treat!"</span>
+    <span class="w3-text-white w3-hide-large w3-hide-medium" style="font-size:60px"><b>As we step into the New Year, we extend a warm welcome to you at [Your Website Name]. To kickstart the festivities, enjoy an exclusive New Year's discount on your first order. Use code NEWFLAVORS2024 at checkout and savor the taste of a fresh start with our authentic African cuisine. Cheers to a year filled with delectable memories!"
+
+Feel free to customize the above content to suit the specific details and tone you want for your website</b></span>
+    <p><a href="#menu" class="w3-button w3-xxlarge w3-black">Let me see the menu</a></p>
+  </div>
+</header>
+
+<!-- Menu Container -->
+<div class="w3-container w3-black w3-padding-64 w3-xxlarge" id="menu">
+  <div class="w3-content">
+  
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">THE MENU</h1>
+    <div class="w3-row w3-center w3-border w3-border-dark-grey">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Pizza');" id="myLink">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Pizza</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Pasta');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Salads</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Starter');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Starter</div>
+      </a>
+    </div>
+<fieldset>At Baba K Kitchen, we believe that every meal should be a celebration – a celebration of the incredible diversity of flavors that Africa has to offer. We take pride in sourcing the finest, locally-sourced ingredients to ensure that each dish is a masterpiece of taste and authenticity. From the fiery spices of North Africa to the soulful stews of West Africa, every bite tells a story of tradition and passion<legend>Dive into our carefully crafted menu, where each dish is a tribute to the culinary artistry of Africa. Indulge in the aromatic spices of Moroccan tagines, savor the bold flavors of Nigerian jollof rice, and experience the tantalizing textures of South African bunny chow. Our menu is a culinary odyssey that spans the entire continent, offering a diverse array of options to suit every palate.</legend></fieldset>
+    <div id="Pizza" class="w3-container menu w3-padding-32 w3-white">
+      <h1><b>Margherita</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$12.50</span></h1>
+      <p class="w3-text-grey">Fresh tomatoes, fresh mozzarella, fresh basil</p>
+      <hr>
+   
+      <h1><b>Formaggio</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$15.50</span></h1>
+      <p class="w3-text-grey">Four cheeses (mozzarella, parmesan, pecorino, jarlsberg)</p>
+      <hr>
+      
+      <h1><b>Chicken</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$17.00</span></h1>
+      <p class="w3-text-grey">Fresh tomatoes, mozzarella, chicken, onions</p>
+      <hr>
+
+      <h1><b>Pineapple'o'clock</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$16.50</span></h1>
+      <p class="w3-text-grey">Fresh tomatoes, mozzarella, fresh pineapple, bacon, fresh basil</p>
+      <hr>
+
+      <h1><b>Meat Town</b> <span class="w3-tag w3-red w3-round">Hot!</span><span class="w3-right w3-tag w3-dark-grey w3-round">$20.00</span></h1>
+      <p class="w3-text-grey">Fresh tomatoes, mozzarella, hot pepporoni, hot sausage, beef, chicken</p>
+      <hr>
+
+      <h1><b>Parma</b> <span class="w3-tag w3-grey w3-round">New</span><span class="w3-right w3-tag w3-dark-grey w3-round">$21.50</span></h1>
+      <p class="w3-text-grey">Fresh tomatoes, mozzarella, parma, bacon, fresh arugula</p>
+    </div>
+
+    <div id="Pasta" class="w3-container menu w3-padding-32 w3-white">
+      <h1><b>Lasagna</b> <span class="w3-tag w3-grey w3-round">Popular</span> <span class="w3-right w3-tag w3-dark-grey w3-round">$13.50</span></h1>
+      <p class="w3-text-grey">Special sauce, mozzarella, parmesan, ground beef</p>
+      <hr>
+   
+      <h1><b>Ravioli</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$14.50</span></h1>
+      <p class="w3-text-grey">Ravioli filled with cheese</p>
+      <hr>
+      
+      <h1><b>Spaghetti Classica</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$11.00</span></h1>
+      <p class="w3-text-grey">Fresh tomatoes, onions, ground beef</p>
+      <hr>
+
+      <h1><b>Seafood pasta</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$25.50</span></h1>
+      <p class="w3-text-grey">Salmon, shrimp, lobster, garlic</p>
+    </div>
+
+
+    <div id="Starter" class="w3-container menu w3-padding-32 w3-white">
+      <h1><b>Today's Soup</b> <span class="w3-tag w3-grey w3-round">Seasonal</span><span class="w3-right w3-tag w3-dark-grey w3-round">$5.50</span></h1>
+      <p class="w3-text-grey">Ask the waiter</p>
+      <hr>
+   
+      <h1><b>Bruschetta</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$8.50</span></h1>
+      <p class="w3-text-grey">Bread with pesto, tomatoes, onion, garlic</p>
+      <hr>
+      
+      <h1><b>Garlic bread</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$9.50</span></h1>
+      <p class="w3-text-grey">Grilled ciabatta, garlic butter, onions</p>
+      <hr>
+      
+      <h1><b>Tomozzarella</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$10.50</span></h1>
+      <p class="w3-text-grey">Tomatoes and mozzarella</p>
+    </div><br>
+
+  </div>
+</div>
+
+<!-- About Container -->
+<div class="w3-container w3-padding-64 w3-red w3-grayscale w3-xlarge" id="about">
+  <div class="w3-content">
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">About</h1>
+    <p>Why Choose Baba K Kitchen:
+
+Authenticity: Immerse yourself in the genuine flavors of Africa with recipes passed down through generations. Our chefs bring their expertise and passion to each dish, ensuring an authentic dining experience.
+
+Diverse Menu: From East to West, North to South, our menu showcases the incredible diversity of African cuisine. Explore a variety of dishes that cater to different tastes and preferences.
+
+Quality Ingredients: We take pride in sourcing the freshest and finest ingredients, supporting local farmers and producers. Our commitment to quality ensures a memorable dining experience.
+
+Warm Hospitality: At Baba K Kitchen, hospitality is a cornerstone. Our staff is dedicated to providing warm and welcoming service, creating an atmosphere where you feel like family.
+
+Cultural Ambiance: Immerse yourself in the rich cultural tapestry of Africa as you dine in a setting that reflects the continent's vibrant spirit. From the decor to the music, every detail is curated to enhance your experience..<fieldset>Catering and Events:
+Baba K Kitchen is not just a place to dine; it's a venue for celebrations and gatherings. Whether you're planning a corporate event, a wedding, or a special occasion, our team can customize a menu to suit your needs and make your event unforgettable.
+
+Visit Us:
+Come and experience the heart and soul of Africa at Baba K Kitchen. We invite you to join us for a culinary adventure that transcends borders, where every meal is a celebration of the rich flavors and traditions that make Africa extraordinary.
+
+Reserve your table now and embark on a gastronomic journey with us<legend>Welcome to Baba K Kitchen – Where Culinary Tradition Meets Modern Excellence!
+
+At Baba K Kitchen, we invite you on a culinary journey that transcends borders, embracing the rich and diverse flavors of African cuisine. Our restaurant is a celebration of the continent's vibrant culinary heritage, where each dish tells a story and each bite is a journey through the heart of Africa.</legend> </fieldset></p>
+    <p><strong>The Chef?</strong> Mr. Italiano himself<img src="/w3images/chef.jpg" style="width:150px" class="w3-circle w3-right" alt="Chef"></p>
+    <p>Visit us at Baba K Kitchen and embark on a culinary journey that captures the essence of Africa on every plate. We invite you to savor the flavors, embrace the culture, and create memories at the intersection of tradition and innovation. Come, dine with us, and experience the magic of Baba K Kitchen – where the heart of Africa beats in every dish..</p>
+    <img src="/w3images/onepage_restaurant.jpg" style="width:100%" class="w3-margin-top w3-margin-bottom" alt="Restaurant">
+    <h1><b>Opening Hours</b></h1>
+    
+    <div class="w3-row">
+      <div class="w3-col s6">
+        <p>Mon & Tue CLOSED</p>
+        <p>Wednesday 10.00 - 24.00</p>
+        <p>Thursday 10:00 - 24:00</p>
+      </div>
+      <div class="w3-col s6">
+        <p>Friday 10:00 - 12:00</p>
+        <p>Saturday 10:00 - 23:00</p>
+        <p>Sunday Closed</p>
+      </div>
+    </div>
+    
+  </div>
+</div>
+<fieldset>Indulge in the richness of African cuisine with a delectable array of flavors that tell a tale of tradition and innovation. At [Your Website Name], we bring the diverse culinary heritage of Africa to your doorstep. Explore our menu, savor the authenticity, and embark on a gastronomic journey that celebrates the vibrant tapestry of African flavors. Ready your taste buds for an experience like no other! 🍽️✨
+
+Visit our website now: [YourWebsiteURL.com]
+
+#TasteOfAfrica #FlavorsBeyondBorders #BabaKKitchen
+
+(Note: Make sure to replace placeholders like [Your Website Name], [Your Physical Location], [Your Contact Number], [Your Email Address], [Social Media Icons/Links], and [YourWebsiteURL.com] with your actual details.)<legend><hr>
 <br> <div class="map">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d206253.45012861438!2d-115.31508258571672!3d36.124918453865035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80beb782a4f57dd1%3A0x3accd5e6d5b379a3!2sLas%20Vegas%2C%20NV%2C%20USA!5e0!3m2!1sen!2sru!4v1580850940897!5m2!1sen!2sru"
                             width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
 
-  <script>
-    // document.addEventListener('DOMContentLoaded', function () {
-      var searchInput = document.getElementById('search-input');
-      var searchButton = document.getElementById('search-button');
-      var searchResults = document.getElementById('search-results');
+</legend></fieldset>
+<!-- Image of location/map -->
+<img src="https://blackrestaurantweeks.com/wp-content/uploads/2021/10/taste-of-nigera-photo-1.jpeg" class="w3-image w3-greyscale" style="width:100%;" id="myMap">
 
-      searchButton.addEventListener('click', function () {
-        // Get the search query from the input field
-        var query = searchInput.value;
+<!-- Contact -->
+<div class="w3-container w3-padding-64 w3-blue-grey w3-grayscale-min w3-xlarge">
+  <div class="w3-content">
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">Contact</h1>
+    <p>Find us at some address at some place or call us at 05050515-122330</p>
+    <p><span class="w3-tag">FYI!</span> We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste.</p>
+    <p class="w3-xxlarge"><strong>Reserve</strong> a table, ask for today's special or just send us a message:</p>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="How many people" required name="People"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Date and time" required name="date" value="2020-11-16T20:00"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
+      <p><button class="w3-button w3-light-grey w3-block" type="submit">SEND MESSAGE</button></p>
+    </form>
+  </div>
+</div>
+<fieldset>Why [Vendor Name]?
 
-        // Make an AJAX request to the server-side script
-        fetch('search.php?q=' + query)
-          .then(response => response.json())
-          .then(data => {
-            // Display the search results on the page
-            displayResults(data);
-          })
-          .catch(error => console.error('Error:', error));
-      });
+Authenticity on Your Plate:
+At [Vendor Name], we pride ourselves on bringing you the most authentic African flavors. Each dish is meticulously crafted using time-honored recipes, ensuring that every bite takes you on a journey to the bustling markets and family kitchens of Africa.
 
-      function displayResults(results) {
-        // Clear previous results
-        searchResults.innerHTML = '';
+Diverse and Delectable Menu:
+Explore the diversity of African cuisine with our thoughtfully curated menu. From the soul-warming stews of West Africa to the aromatic spices of North Africa, our offerings cater to all taste buds. Vegetarian and vegan options are available, ensuring there's something for everyone.
 
-        // Display each result in the result container
-        results.forEach(function (result) {
-          var resultItem = document.createElement('div');
-          resultItem.className = 'result-item';
-          resultItem.textContent = result; // You should replace this with the actual data from the server
+Handpicked Ingredients:
+We believe that the key to exceptional food lies in the quality of ingredients. That's why we source only the finest, freshest, and locally sourced produce, spices, and herbs. Every dish is a testament to our commitment to providing you with a genuine taste of Africa.
 
-          // Append the result item to the results container
-          searchResults.appendChild(resultItem);
-        });
-      }
-    });
-  </script>
+Passionate Culinary Craftsmanship:
+Our chefs are culinary artisans dedicated to their craft. With a deep understanding of traditional African cooking techniques and a passion for perfection, they ensure that every dish leaving our stall is a masterpiece of flavor and presentation.
+
+Warm Hospitality:
+When you visit [Vendor Name], you're not just a customer – you're a guest in our culinary haven. Our friendly and attentive staff are here to make your experience memorable, offering personalized recommendations and ensuring you feel the warmth of African hospitality.
+
+Specialties That Make Us Unique:
+
+[Signature Dish 1]: [Description and origin]
+[Signature Dish 2]: [Description and origin]
+[Signature Drink]: [Description and flavor profile]
+Visit Us Today:
+Whether you're craving the bold spices of North Africa or the comfort of home-style Southern African dishes, [Vendor Name] is here to satisfy your culinary desires. Join us at [Location] and let your taste buds dance to the rhythm of Africa.</fieldset>
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-48 w3-xxlarge">
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-red";
+}
+document.getElementById("myLink").click();
+</script>
+
 </body>
 </html>
