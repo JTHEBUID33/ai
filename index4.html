@@ -1,252 +1,433 @@
 <!DOCTYPE html>
-<html>
+<!-- set this class so CSS definitions that now use REM size, would work relative to this.
+	Since now almost everything is relative to one of the 2 absolute font size classese -->
+<html class="user_font_size_normal" lang="en">
+
+<!-- Mirrored from webmail.telkomsa.net/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 25 Jan 2024 13:45:48 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head>
-<title>BABA K KITCHEN</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
-<style>
-<script>
-// Tabbed Menu
-function openMenu(evt, menuName) {
-  var i, x, tablinks;
-  x = document.getElementsByClassName("menu");
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < x.length; i++) {
-     tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
-  }
-  document.getElementById(menuName).style.display = "block";
-  evt.currentTarget.firstElementChild.className += " w3-red";
-}
-document.getElementById("myLink").click();
-    }
-  body, html {height: 100%}
-body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
-.menu {display: none}
-.bgimg {
-  background-repeat: no-repeat;
-  background-attachment:fixed;
-  background-size: 100%100%;
-  background-image: url("https://media.istockphoto.com/id/1134717299/photo/healthy-food-concept-with-fresh-vegetables-and-ingredients-for-cooking.webp?b=1&s=170667a&w=0&k=20&c=GGqHf625UB2B_GbBGHOrhdaxasaSjcJlyC5FYlvBAn8=");
-  min-height: 90%;
-}
-</style>
+<!--
+ login.jsp
+ * ***** BEGIN LICENSE BLOCK *****
+ * Zimbra Collaboration Suite Web Client
+ * Copyright (C) 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016 Synacor, Inc.
+ *
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software Foundation,
+ * version 2 of the License.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+ * without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * See the GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License along with this program.
+ * If not, see <https://www.gnu.org/licenses/>.
+ * ***** END LICENSE BLOCK *****
+-->
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<!--	<title>Zimbra Web Client Sign In</title> -->
+	<title>Telkom Internet web client </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Zimbra provides open source server and client software for messaging and collaboration. To find out more visit https://www.zimbra.com.">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<link rel="stylesheet" type="text/css" href="mail/css/common%2clogin%2czhtml%2cskin1bc8.css?skin=harmony&amp;v=231201114945">
+	<link rel="SHORTCUT ICON" href="mail/img/logo/favicon.ico">
+
+
 </head>
-<body>
+<body onload="onLoad();">
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top w3-hide-small">
-  <div class="w3-bar w3-xlarge w3-black w3-opacity w3-hover-opacity-off" id="myNavbar">
-    <a href="#" class="w3-bar-item w3-button">HOME</a>
-    <a href="#menu" class="w3-bar-item w3-button">MENU</a>
-    <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
-    <a href="#myMap" class="w3-bar-item w3-button">CONTACT</a>
+	<div class="LoginScreen">
+	<nav class="navbar navbar-expand-lg login-navbar" style = "background-color: #007cc3;" role="navigation">
+	<a class="navbar-brand" href="../www.telkomsa.net/index.html">
+		<img src="skins/_base/logos/TelkomSA-logo.png" alt="logo"> 
+	</a>
+</nav>
+	
+		<div class="center">
+			<div class="contentBox">
+				<!-- <h1><a href="https://www.zimbra.com/" id="bannerLink" target="_new" title='Zimbra'><span class="ScreenReaderOnly">Zimbra</span> 
+				
+					<span class="ImgLoginBanner"></span>
+				</a></h1> -->
+				<h1 style = "padding:15px; font-weight:600; color:white">Telkom Internet Mail</h1>
+
+				
+				<div id="ZLoginAppName">Web Client</div>
+				<form method="post" name="loginForm" action="https://webmail.telkomsa.net/mail/" accept-charset="UTF-8">
+								<input type="hidden" name="loginOp" value="login"/>
+								<input type="hidden" name="login_csrf" value="6c4bea1c-fe3a-46a4-bcbe-0c4658c36f75"/>
+
+								<table class="form">
+                        <tr>
+                                        <td><label for="username">Username:</label></td>
+                                        <td><input id="username" class="zLoginField" name="username" type="text" value="" size="40" maxlength="1024" autocapitalize="off" autocorrect="off"/></td>
+                                        </tr>
+                                        <tr>
+                                <td><label for="password">Password:</label></td>
+                                <td><input id="password" autocomplete="off" class="zLoginField" name="password" type="password" value="" size="40" maxlength="1024"/></td>
+                                </tr>
+                                <tr>
+                                <td>&nbsp;</td>
+                                <td class="submitTD">
+                                <input id="remember" value="1" type="checkbox" name="zrememberme" />
+                                    <label for="remember">Stay signed in</label>
+                                <input type="submit" class="ZLoginButton DwtButton" value="Sign In" />
+                                </td>
+                                </tr>
+			
+				<tr >
+                            <td colspan="2"><hr/></td>
+                            </tr>
+                            <tr >
+                            <td>
+                            <label for="client">Version:</label>
+                            </td>
+                            <td>
+                            <div class="positioning">
+                            <select id="client" name="client" onchange="clientChange(this.options[this.selectedIndex].value)">
+                                    <option value="preferred"  > Default</option>
+                                    <option value="advanced" > Classic</option>
+                                    <option value="standard" selected> ???clientStandard???</option>
+                                    <option value="mobile" > Mobile</option>
+                                    </select>
+                                <script TYPE="text/javascript">
+                        document.write("<a href='#' onclick='showWhatsThis();' id='ZLoginWhatsThisAnchor' aria-controls='ZLoginWhatsThis' aria-expanded='false'>What’s This?</a>");
+                        </script>
+                        <div id="ZLoginWhatsThis" class="ZLoginInfoMessage" style="display:none;" onclick='showWhatsThis();' role="tooltip"><p><strong>Modern</strong><br> The Modern Web App delivers a responsive experience across all your devices and integrates with many popular apps.</p><p><strong>Classic</strong><br> The Classic Web App is familiar to long-time Zimbra users. It delivers advanced collaboration and calendar features popular with power users on Desktop web browsers.</p><p><strong>Default</strong><br> This will sign you in according to your saved Preference. In the Modern Web App, set this preference in Settings > General > Zimbra Version. In Classic, set it in Preferences > General > Sign In.</p></div>
+                        <div id="ZLoginUnsupported" class="ZLoginInfoMessage" style="display:none;">Note that your web browser or display does not fully support the Advanced version.  We strongly recommend that you use the Standard client.</div>
+                        </div>
+                        </td>
+                        </tr>
+                        </table>
+                    </form>
+			</div>
+			<div class="decor1"></div>
+		</div>
+
+		<!-- <div class="Footer">
+			<div id="ZLoginNotice" class="legalNotice-small"><a target="_new" href="https://www.zimbra.com">Zimbra</a> :: the leader in open source messaging and collaboration :: <a target="_new" href="https://blog.zimbra.com">Blog</a> - <a target="_new" href="https://wiki.zimbra.com">Wiki</a> - <a target="_new" href="https://www.zimbra.com/forums">Forums</a></div>
+			<div class="copyright">
+			Copyright © 2005-2023 Synacor, Inc. All rights reserved. "Zimbra" is a registered trademark of Synacor, Inc.</div>
+		</div> -->
+
+		<div class="Footer">
+
+
+			
+<footer class="page-footer font-small">
+
+
+
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-white text-center py-3" style = "background-color: #007cc3;"> Copyright Telkom SA SOC Limited. 2020 . All Rights Reserved.
+        
+        <img src="skins/_base/logos/TelkomSA-logo.png" alt="logo" style="float: right;padding-right: 17px;padding-bottom: 7px;">
   </div>
-</div>
-  
-<!-- Header with image -->
-<header class="bgimg w3-display-container w3-grayscale-min" id="home">
-  <div class="w3-display-bottomleft w3-padding">
-    <span class="w3-tag w3-xlarge">Open from 10am to 12pm<br>Ready to embark on a delicious journey? Order your favorite African dishes online with just a few clicks. Explore our menu, select your favorites, and let the feast begin. We bring the flavors of Africa to your doorstep.</span>
-  </div>
-  <div class="w3-display-middle w3-center">
-    <span class="w3-text-white w3-hide-small" style="font-size:100px">At [Your Website Name], we take pride in offering you an unparalleled culinary journey through the heart of Africa. Our commitment to quality, authenticity, and a dash of innovation sets us apart as the best destination for your gastronomic delights. From traditional favorites to contemporary twists, we bring you a taste of Africa that transcends boundaries. Join us as we embark on a culinary adventure that celebrates the diversity and richness of our continent's food culture. Your satisfaction is our guarantee, and your taste buds are in for a treat!"</span>
-    <span class="w3-text-white w3-hide-large w3-hide-medium" style="font-size:60px"><b>As we step into the New Year, we extend a warm welcome to you at [Your Website Name]. To kickstart the festivities, enjoy an exclusive New Year's discount on your first order. Use code NEWFLAVORS2024 at checkout and savor the taste of a fresh start with our authentic African cuisine. Cheers to a year filled with delectable memories!"
+  <!-- Copyright -->
 
-Feel free to customize the above content to suit the specific details and tone you want for your website</b></span>
-    <p><a href="#menu" class="w3-button w3-xxlarge w3-black">Let me see the menu</a></p>
-  </div>
-</header>
-
-<!-- Menu Container -->
-<div class="w3-container w3-black w3-padding-64 w3-xxlarge" id="menu">
-  <div class="w3-content">
-  
-    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">THE MENU</h1>
-    <div class="w3-row w3-center w3-border w3-border-dark-grey">
-      <a href="javascript:void(0)" onclick="openMenu(event, 'Pizza');" id="myLink">
-        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Pizza</div>
-      </a>
-      <a href="javascript:void(0)" onclick="openMenu(event, 'Pasta');">
-        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Salads</div>
-      </a>
-      <a href="javascript:void(0)" onclick="openMenu(event, 'Starter');">
-        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Starter</div>
-      </a>
-    </div>
-<fieldset>At Baba K Kitchen, we believe that every meal should be a celebration – a celebration of the incredible diversity of flavors that Africa has to offer. We take pride in sourcing the finest, locally-sourced ingredients to ensure that each dish is a masterpiece of taste and authenticity. From the fiery spices of North Africa to the soulful stews of West Africa, every bite tells a story of tradition and passion<legend>Dive into our carefully crafted menu, where each dish is a tribute to the culinary artistry of Africa. Indulge in the aromatic spices of Moroccan tagines, savor the bold flavors of Nigerian jollof rice, and experience the tantalizing textures of South African bunny chow. Our menu is a culinary odyssey that spans the entire continent, offering a diverse array of options to suit every palate.</legend></fieldset>
-    <div id="Pizza" class="w3-container menu w3-padding-32 w3-white">
-      <h1><b>Margherita</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$12.50</span></h1>
-      <p class="w3-text-grey">Fresh tomatoes, fresh mozzarella, fresh basil</p>
-      <hr>
-   
-      <h1><b>Formaggio</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$15.50</span></h1>
-      <p class="w3-text-grey">Four cheeses (mozzarella, parmesan, pecorino, jarlsberg)</p>
-      <hr>
-      
-      <h1><b>Chicken</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$17.00</span></h1>
-      <p class="w3-text-grey">Fresh tomatoes, mozzarella, chicken, onions</p>
-      <hr>
-
-      <h1><b>Pineapple'o'clock</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$16.50</span></h1>
-      <p class="w3-text-grey">Fresh tomatoes, mozzarella, fresh pineapple, bacon, fresh basil</p>
-      <hr>
-
-      <h1><b>Meat Town</b> <span class="w3-tag w3-red w3-round">Hot!</span><span class="w3-right w3-tag w3-dark-grey w3-round">$20.00</span></h1>
-      <p class="w3-text-grey">Fresh tomatoes, mozzarella, hot pepporoni, hot sausage, beef, chicken</p>
-      <hr>
-
-      <h1><b>Parma</b> <span class="w3-tag w3-grey w3-round">New</span><span class="w3-right w3-tag w3-dark-grey w3-round">$21.50</span></h1>
-      <p class="w3-text-grey">Fresh tomatoes, mozzarella, parma, bacon, fresh arugula</p>
-    </div>
-
-    <div id="Pasta" class="w3-container menu w3-padding-32 w3-white">
-      <h1><b>Lasagna</b> <span class="w3-tag w3-grey w3-round">Popular</span> <span class="w3-right w3-tag w3-dark-grey w3-round">$13.50</span></h1>
-      <p class="w3-text-grey">Special sauce, mozzarella, parmesan, ground beef</p>
-      <hr>
-   
-      <h1><b>Ravioli</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$14.50</span></h1>
-      <p class="w3-text-grey">Ravioli filled with cheese</p>
-      <hr>
-      
-      <h1><b>Spaghetti Classica</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$11.00</span></h1>
-      <p class="w3-text-grey">Fresh tomatoes, onions, ground beef</p>
-      <hr>
-
-      <h1><b>Seafood pasta</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$25.50</span></h1>
-      <p class="w3-text-grey">Salmon, shrimp, lobster, garlic</p>
-    </div>
-
-
-    <div id="Starter" class="w3-container menu w3-padding-32 w3-white">
-      <h1><b>Today's Soup</b> <span class="w3-tag w3-grey w3-round">Seasonal</span><span class="w3-right w3-tag w3-dark-grey w3-round">$5.50</span></h1>
-      <p class="w3-text-grey">Ask the waiter</p>
-      <hr>
-   
-      <h1><b>Bruschetta</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$8.50</span></h1>
-      <p class="w3-text-grey">Bread with pesto, tomatoes, onion, garlic</p>
-      <hr>
-      
-      <h1><b>Garlic bread</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$9.50</span></h1>
-      <p class="w3-text-grey">Grilled ciabatta, garlic butter, onions</p>
-      <hr>
-      
-      <h1><b>Tomozzarella</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$10.50</span></h1>
-      <p class="w3-text-grey">Tomatoes and mozzarella</p>
-    </div><br>
-
-  </div>
-</div>
-
-<!-- About Container -->
-<div class="w3-container w3-padding-64 w3-red w3-grayscale w3-xlarge" id="about">
-  <div class="w3-content">
-    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">About</h1>
-    <p>Why Choose Baba K Kitchen:
-
-Authenticity: Immerse yourself in the genuine flavors of Africa with recipes passed down through generations. Our chefs bring their expertise and passion to each dish, ensuring an authentic dining experience.
-
-Diverse Menu: From East to West, North to South, our menu showcases the incredible diversity of African cuisine. Explore a variety of dishes that cater to different tastes and preferences.
-
-Quality Ingredients: We take pride in sourcing the freshest and finest ingredients, supporting local farmers and producers. Our commitment to quality ensures a memorable dining experience.
-
-Warm Hospitality: At Baba K Kitchen, hospitality is a cornerstone. Our staff is dedicated to providing warm and welcoming service, creating an atmosphere where you feel like family.
-
-Cultural Ambiance: Immerse yourself in the rich cultural tapestry of Africa as you dine in a setting that reflects the continent's vibrant spirit. From the decor to the music, every detail is curated to enhance your experience..<fieldset>Catering and Events:
-Baba K Kitchen is not just a place to dine; it's a venue for celebrations and gatherings. Whether you're planning a corporate event, a wedding, or a special occasion, our team can customize a menu to suit your needs and make your event unforgettable.
-
-Visit Us:
-Come and experience the heart and soul of Africa at Baba K Kitchen. We invite you to join us for a culinary adventure that transcends borders, where every meal is a celebration of the rich flavors and traditions that make Africa extraordinary.
-
-Reserve your table now and embark on a gastronomic journey with us<legend>Welcome to Baba K Kitchen – Where Culinary Tradition Meets Modern Excellence!
-
-At Baba K Kitchen, we invite you on a culinary journey that transcends borders, embracing the rich and diverse flavors of African cuisine. Our restaurant is a celebration of the continent's vibrant culinary heritage, where each dish tells a story and each bite is a journey through the heart of Africa.</legend> </fieldset></p>
-    <p><strong>The Chef?</strong> Mr. Italiano himself<img src="/w3images/chef.jpg" style="width:150px" class="w3-circle w3-right" alt="Chef"></p>
-    <p>Visit us at Baba K Kitchen and embark on a culinary journey that captures the essence of Africa on every plate. We invite you to savor the flavors, embrace the culture, and create memories at the intersection of tradition and innovation. Come, dine with us, and experience the magic of Baba K Kitchen – where the heart of Africa beats in every dish..</p>
-    <img src="/w3images/onepage_restaurant.jpg" style="width:100%" class="w3-margin-top w3-margin-bottom" alt="Restaurant">
-    <h1><b>Opening Hours</b></h1>
-    
-    <div class="w3-row">
-      <div class="w3-col s6">
-        <p>Mon & Tue CLOSED</p>
-        <p>Wednesday 10.00 - 24.00</p>
-        <p>Thursday 10:00 - 24:00</p>
-      </div>
-      <div class="w3-col s6">
-        <p>Friday 10:00 - 12:00</p>
-        <p>Saturday 10:00 - 23:00</p>
-        <p>Sunday Closed</p>
-      </div>
-    </div>
-    
-  </div>
-</div>
-<fieldset>Indulge in the richness of African cuisine with a delectable array of flavors that tell a tale of tradition and innovation. At [Your Website Name], we bring the diverse culinary heritage of Africa to your doorstep. Explore our menu, savor the authenticity, and embark on a gastronomic journey that celebrates the vibrant tapestry of African flavors. Ready your taste buds for an experience like no other! 🍽️✨
-
-Visit our website now: [YourWebsiteURL.com]
-
-#TasteOfAfrica #FlavorsBeyondBorders #BabaKKitchen
-
-(Note: Make sure to replace placeholders like [Your Website Name], [Your Physical Location], [Your Contact Number], [Your Email Address], [Social Media Icons/Links], and [YourWebsiteURL.com] with your actual details.)<legend><hr>
-<br> <div class="map">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d206253.45012861438!2d-115.31508258571672!3d36.124918453865035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80beb782a4f57dd1%3A0x3accd5e6d5b379a3!2sLas%20Vegas%2C%20NV%2C%20USA!5e0!3m2!1sen!2sru!4v1580850940897!5m2!1sen!2sru"
-                            width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-
-</legend></fieldset>
-<!-- Image of location/map -->
-<img src="https://blackrestaurantweeks.com/wp-content/uploads/2021/10/taste-of-nigera-photo-1.jpeg" class="w3-image w3-greyscale" style="width:100%;" id="myMap">
-
-<!-- Contact -->
-<div class="w3-container w3-padding-64 w3-blue-grey w3-grayscale-min w3-xlarge">
-  <div class="w3-content">
-    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">Contact</h1>
-    <p>Find us at some address at some place or call us at 05050515-122330</p>
-    <p><span class="w3-tag">FYI!</span> We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste.</p>
-    <p class="w3-xxlarge"><strong>Reserve</strong> a table, ask for today's special or just send us a message:</p>
-    <form action="/action_page.php" target="_blank">
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="How many people" required name="People"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Date and time" required name="date" value="2020-11-16T20:00"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
-      <p><button class="w3-button w3-light-grey w3-block" type="submit">SEND MESSAGE</button></p>
-    </form>
-  </div>
-</div>
-<fieldset>Why [Vendor Name]?
-
-Authenticity on Your Plate:
-At [Vendor Name], we pride ourselves on bringing you the most authentic African flavors. Each dish is meticulously crafted using time-honored recipes, ensuring that every bite takes you on a journey to the bustling markets and family kitchens of Africa.
-
-Diverse and Delectable Menu:
-Explore the diversity of African cuisine with our thoughtfully curated menu. From the soul-warming stews of West Africa to the aromatic spices of North Africa, our offerings cater to all taste buds. Vegetarian and vegan options are available, ensuring there's something for everyone.
-
-Handpicked Ingredients:
-We believe that the key to exceptional food lies in the quality of ingredients. That's why we source only the finest, freshest, and locally sourced produce, spices, and herbs. Every dish is a testament to our commitment to providing you with a genuine taste of Africa.
-
-Passionate Culinary Craftsmanship:
-Our chefs are culinary artisans dedicated to their craft. With a deep understanding of traditional African cooking techniques and a passion for perfection, they ensure that every dish leaving our stall is a masterpiece of flavor and presentation.
-
-Warm Hospitality:
-When you visit [Vendor Name], you're not just a customer – you're a guest in our culinary haven. Our friendly and attentive staff are here to make your experience memorable, offering personalized recommendations and ensuring you feel the warmth of African hospitality.
-
-Specialties That Make Us Unique:
-
-[Signature Dish 1]: [Description and origin]
-[Signature Dish 2]: [Description and origin]
-[Signature Drink]: [Description and flavor profile]
-Visit Us Today:
-Whether you're craving the bold spices of North Africa or the comfort of home-style Southern African dishes, [Vendor Name] is here to satisfy your culinary desires. Join us at [Location] and let your taste buds dance to the rhythm of Africa.</fieldset>
-<!-- Footer -->
-<footer class="w3-center w3-black w3-padding-48 w3-xxlarge">
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
 </footer>
 
 
 
+	<!--
+		<div id="ZLoginNotice" class="legalNotice-small"><a target="_new" href="http://www.zimbra.com">Zimbra</a> :: the leader in open source messaging and collaboration :: <a target="_new" href="http://blog.zimbra.com">Blog</a> - <a target="_new" href="http://wiki.zimbra.com">Wiki</a> - <a target="_new" href="http://www.zimbra.com/forums">Forums</a></div>
+        
+        <div class="copyright">
+            Copyright  2005-2014 Telligent Systems, Inc. All rights reserved. "Telligent" and "Zimbra" are registered trademarks or trademarks of Telligent Systems, Inc.
+            </div> -->
+        </div>
+
+		<div class="decor2"></div>
+	</div>
+<script>
+
+function ZmSkin(e){
+this.hints=this.mergeObjects(ZmSkin.hints,e)
+}
+ZmSkin.hints={
+name:"harmony",version:"1",skin:{
+containers:"skin_outer"}
+,banner:{
+position:"static",url:"http://www.telkomsa.net"}
+,userInfo:{
+position:"static"}
+,search:{
+position:"static"}
+,quota:{
+position:"static"}
+,presence:{
+width:"40px",height:"24px"}
+,appView:{
+position:"static"}
+,searchResultsToolbar:{
+containers:["skin_tr_search_results_toolbar"]}
+,newButton:{
+containers:["skin_td_new_button"]}
+,tree:{
+minWidth:"13.5rem",maxWidth:"84rem",containers:["skin_td_tree","skin_td_tree_app_sash"],resizeContainers:["skin_td_tree","skin_container_app_new_button"]}
+,topToolbar:{
+containers:"skin_spacing_app_top_toolbar"}
+,treeFooter:{
+containers:"skin_tr_tree_footer"}
+,topAd:{
+containers:"skin_tr_top_ad"}
+,sidebarAd:{
+containers:"skin_td_sidebar_ad"}
+,bottomAd:{
+containers:"skin_tr_bottom_ad"}
+,treeTopAd:{
+containers:"skin_tr_tree_top_ad"}
+,treeBottomAd:{
+containers:"skin_tr_tree_bottom_ad"}
+,helpButton:{
+style:"link",container:"quota",url:""}
+,logoutButton:{
+style:"link",container:"quota"}
+,appChooser:{
+position:"static",direction:"LR"}
+,toast:{
+location:"N",transitions:[{
+type:"fade-in",step:5,duration:50}
+,{
+type:"pause",duration:5000}
+,{
+type:"fade-out",step:-10,duration:500}
+]}
+,fullScreen:{
+containers:["!skin_td_tree","!skin_td_tree_app_sash"]}
+,allAds:{
+containers:["skin_tr_top_ad","skin_td_sidebar_ad","skin_tr_bottom_ad","skin_tr_tree_top_ad","skin_tr_tree_bottom_ad"]}
+,hideSearchInCompose:true,notificationBanner:"/mail/skins/_base/logos/NotificationBanner_grey.gif?v=231201114945"};
+window.BaseSkin=ZmSkin;
+ZmSkin.prototype={
+show:function(t,e,l){
+var a=this.hints[t]&&this.hints[t].containers;
+if(a){
+if(typeof a=="function"){
+a.apply(this,[e!=false]);
+skin._reflowApp();
+return
+}
+if(typeof a=="string"){
+a=[a]
+}
+var s=false;
+for(var r=0;
+r<a.length;
+r++){
+var h=a[r];
+var o=h.replace(/^!/,"");
+var n=h!=o;
+if(this._showEl(o,n?!e:e)){
+s=true
+}}
+if(s&&!l){
+skin._reflowApp()
+}}}
+,hide:function(e,t){
+this.show(e,false,t)
+}
+,gotoApp:function(e,t){
+appCtxt.getAppController().activateApp(e,null,t)
+}
+,gotoPrefs:function(e){
+if(appCtxt.getCurrentAppName()!=ZmApp.PREFERENCES){
+var t=new AjxCallback(this,this._gotoPrefPage,[e]);
+this.gotoApp(ZmApp.PREFERENCES,t)
+}else{
+this._gotoPrefPage(e)
+}}
+,mergeObjects:function(e,o){
+if(e==null){
+e={}
+}
+for(var a=1;
+a<arguments.length;
+a++){
+var n=arguments[a];
+for(var t in n){
+var s=e[t];
+if(typeof s=="object"&&!(s instanceof Array)){
+this.mergeObjects(e[t],n[t]);
+continue
+}
+if(!e[t]){
+e[t]=n[t]
+}}}
+return e
+}
+,getTreeWidth:function(){
+return Dwt.getSize(this._getEl(this.hints.tree.containers[0])).x
+}
+,setTreeWidth:function(e){
+this._setContainerSizes("tree",e,null)
+}
+,showTopAd:function(e){
+if(skin._showEl("skin_tr_top_ad",e)){
+skin._reflowApp()
+}}
+,hideTopAd:function(){
+skin.showTopAd(false)
+}
+,getTopAdContainer:function(){
+return skin._getEl("skin_container_top_ad")
+}
+,showSidebarAd:function(e){
+var t="skin_td_sidebar_ad";
+if(e!=null){
+Dwt.setSize(t,e)
+}
+if(skin._showEl(t)){
+skin._reflowApp()
+}}
+,hideSidebarAd:function(){
+var e="skin_td_sidebar_ad";
+if(skin._hideEl(e)){
+skin._reflowApp()
+}}
+,getSidebarAdContainer:function(){
+return this._getEl("skin_container_sidebar_ad")
+}
+,handleNotification:function(t,e){}
+,_getEl:function(e){
+return(typeof e=="string"?document.getElementById(e):e)
+}
+,_showEl:function(o,i){
+var t=this._getEl(o);
+if(!t){
+return
+}
+var a;
+if(i==false){
+a="none"
+}else{
+var e=t.tagName;
+if(e=="TD"){
+a="table-cell"
+}else{
+if(e=="TR"){
+a="table-row"
+}else{
+a="block"
+}}}
+if(a!=t.style.display){
+t.style.display=a;
+return true
+}else{
+return false
+}}
+,_hideEl:function(e){
+return this._showEl(e,false)
+}
+,_reparentEl:function(i,e){
+var a=this._getEl(e);
+var t=a&&this._getEl(i);
+if(t){
+a.appendChild(t)
+}}
+,_setContainerSizes:function(n,a,e){
+var o=this.hints[n].resizeContainers||this.hints[n].containers;
+for(var t=0;
+t<o.length;
+t++){
+Dwt.setSize(o[t],a,null)
+}}
+,_reflowApp:function(){
+if(window._zimbraMail){
+window._zimbraMail.getAppViewMgr().fitAll()
+}}
+,_gotoPrefPage:function(a){
+if(a==null){
+return
+}
+var i=appCtxt.getApp(ZmApp.PREFERENCES);
+var t=i.getPrefController();
+var e=t.getPrefsView();
+e.selectSection(a)
+}};
+window.skin=new ZmSkin();
+var link = document.getElementById("bannerLink");
+if (link) {
+	link.href = skin.hints.banner.url;
+}
+
+
+
+// show a message if they should be using the 'standard' client, but have chosen 'advanced' instead
+function clientChange(selectValue) {
+	var useStandard = true;
+	useStandard = useStandard || (screen && (screen.width <= 800 && screen.height <= 600));
+	var div = document.getElementById("ZLoginUnsupported");
+	if (div)
+	div.style.display = ((selectValue == 'advanced') && useStandard) ? 'block' : 'none';
+}
+
+// if they have JS, write out a "what's this?" link that shows the message below
+function showWhatsThis() {
+	var anchor = document.getElementById('ZLoginWhatsThisAnchor'),
+        tooltip = document.getElementById("ZLoginWhatsThis"),
+        doHide = (tooltip.style.display === "block");
+    tooltip.style.display = doHide ? "none" : "block";
+    anchor.setAttribute("aria-expanded", doHide ? "false" : "true");
+}
+
+function forgotPassword() {
+	var accountInput = document.getElementById("username").value;
+	var queryParams = encodeURI("account=" + accountInput);
+	var url = "public/PasswordRecoveryd41d.html?" + location.search;
+
+	if (accountInput !== '') {
+		url += (location.search !== '' ? '&' : '') + encodeURI("account=" + accountInput);
+	}
+
+	window.location.href = url;
+}
+
+
+function onLoad() {
+	var loginForm = document.loginForm;
+	if (loginForm.username) {
+		if (loginForm.username.value != "") {
+			loginForm.password.focus(); //if username set, focus on password
+		}
+		else {
+			loginForm.username.focus();
+		}
+	}
+	clientChange("standard");
+    //check if the login page is loaded in the sidebar.
+    if (navigator.mozSocial) {
+        //send a ping so that worker knows about this page.
+        navigator.mozSocial.getWorker().port.postMessage({topic: "worker.reload", data: true});
+        //this page is loaded in firefox sidebar so listen for message from worker.
+        navigator.mozSocial.getWorker().port.onmessage = function onmessage(e) {
+            var topic = e.data.topic;
+            if (topic && topic == "sidebar.authenticated") {
+                window.location.href = "public/launchSidebar.html";
+            }
+        };
+    }
+	if (false && loginForm.totpcode) {
+        loginForm.totpcode.focus();
+	}
+}
+</script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="../maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="../ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Popper JS -->
+<script src="../cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="../maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
+
+
 </body>
+
+<!-- Mirrored from webmail.telkomsa.net/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 25 Jan 2024 13:45:57 GMT -->
 </html>
